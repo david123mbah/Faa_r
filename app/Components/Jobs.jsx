@@ -6,7 +6,7 @@ import { BiTimeFive } from 'react-icons/bi';
 const Data = [
   {
   id: 1,
-  image: "public/bbb.jpg",
+  image: "/dbx.jpeg",
   title: "Software Engineer - React.js",
   location: "Douala, Cameroon",
   desc: "Build dynamic web applications.",
@@ -14,7 +14,7 @@ const Data = [
   },
   {
   id: 2,
-  image: "public/bbb.jpg",
+  image: "/mm.jpeg",
   title: "Data Scientist - Machine Learning",
   location: "Yaoundé, Cameroon",
   desc: "Leverage data to drive insights.",
@@ -22,7 +22,7 @@ const Data = [
   },
   {
   id: 3,
-  image: "public/bbb.jpg",
+  image: "/mm.jpeg",
   title: "Cybersecurity Analyst",
   location: "Limbe, Cameroon",
   desc: "Protect organizations from cyber threats.",
@@ -30,7 +30,7 @@ const Data = [
   },
   {
   id: 4,
-  image: "public/bbb.jpg",
+  image: "/dbx.jpeg",
   title: "Mobile App Developer - Flutter",
   location: "Buea, Cameroon",
   desc: "Create cross-platform mobile apps.",
@@ -38,7 +38,7 @@ const Data = [
   },
   {
   id: 5,
-  image: "public/bbb.jpg",
+  image: "/shhsdh.png",
   title: "DevOps Engineer",
   location: "Bamenda, Cameroon",
   desc: "Automate software development and deployment.",
@@ -46,7 +46,7 @@ const Data = [
   },
   {
   id: 6,
-  image: "public/bbb.jpg",
+  image: "/nnnn.jpeg",
   title: "UI/UX Designer",
   location: "Garoua, Cameroon",
   desc: "Create user-friendly and visually appealing designs.",
@@ -54,7 +54,7 @@ const Data = [
   },
   {
   id: 7,
-  image: "public/bbb.jpg",
+  image: "/sdndn.jpeg",
   title: "Full-Stack Developer - MERN Stack",
   location: "Maroua, Cameroon",
   desc: "Build end-to-end web applications.",
@@ -62,7 +62,7 @@ const Data = [
   },
   {
   id: 8,
-  image: "public/bbb.jpg",
+  image: "/nnnn.jpeg",
   title: "Network Administrator",
   location: "Bafoussam, Cameroon",
   desc: "Manage and maintain computer networks.",
@@ -70,7 +70,7 @@ const Data = [
   },
   {
   id: 9,
-  image: "public/bbb.jpg",
+  image: "/sdndn.jpeg",
   title: "Quality Assurance Analyst",
   location: "Ngaoundéré, Cameroon",
   desc: "Ensure software quality and reliability.",
@@ -78,7 +78,7 @@ const Data = [
   },
   {
   id: 10,
-  image: "public/bbb.jpg",
+  image: "/mm.jpeg",
   title: "Product Manager",
   location: "Kribi, Cameroon",
   desc: "Define and execute product strategy.",
@@ -116,9 +116,14 @@ const Jobs = () => {
                 {job.company}
               </span>
             </div>
-            <button className="border-[2px] rounded-[10px] block p-[10px] w-full text-[14px] semibold text-textColor hover:bg-white group-hover/ item:text-textColor group-hover:text-white">
-              Apply Now
-            </button>
+            <div className="flex justify-between items-center">
+              <button className="border-[3px] rounded-[10px] p-[5px] w-[100px] text-[12px] semibold text-textColor hover:bg-white group-hover/ item:text-textColor group-hover:text-white">
+                Show Details
+              </button>
+              <button className="border-[3px] rounded-[10px] p-[5px] w-[100px] text-[12px] semibold text-textColor hover:bg-white group-hover/ item:text-textColor group-hover:text-white">
+                Apply Now
+              </button>
+            </div>
           </div>
         ))}
       </div>
