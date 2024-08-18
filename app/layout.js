@@ -1,6 +1,8 @@
 import { ClerkProvider } from "@clerk/nextjs";
 import { Public_Sans } from "next/font/google"; 
 import "./globals.css"; 
+import Navbar from "./Components/Navbar";
+import Footer from "./Components/Footer";
 
 const publicSans = Public_Sans({
   subsets: ["latin"],
@@ -33,7 +35,11 @@ export default function RootLayout({ children }) {
     >
       <html lang="en">
         <body className={publicSans.className}>
-           {children}   
+          <Navbar/>
+
+         
+           {children} 
+             <Footer/>
         </body>
       </html>
     </ClerkProvider>
