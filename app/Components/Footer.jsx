@@ -1,5 +1,6 @@
 import React from 'react'
 
+import './index.css'
 const Footer = () => {
   return (
     <div className="footer p-[5rem] mb-4 bg-blueColor rounded-[10px] 

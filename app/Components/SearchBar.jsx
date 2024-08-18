@@ -3,6 +3,8 @@ import { AiOutlineCloseCircle, AiOutlineSearch } from 'react-icons/ai';
 import { BsHouseDoor } from 'react-icons/bs';
 import { CiLocationOn } from 'react-icons/ci';
 
+import './index.css'
+
 const SearchBar = () => {
   return (
     <div className="searchDiv grid gp-10 bg-greyIsh rounded-[10px] p-[3rem] w-75">
