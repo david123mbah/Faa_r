@@ -1,0 +1,41 @@
+.navbar {
+    background-color: #fff; /* White background */
+    padding: 1rem 2rem; /* Padding for better spacing */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    border-radius: 0; /* No rounded corners for a more professional look */
+  }
+  
+  .navbar-left, .navbar-right {
+    display: flex;
+    align-items: center;
+  }
+  
+  .navbar-left a, .navbar-right a {
+    margin: 0 1rem; /* Adjust spacing as needed */
+    text-decoration: none;
+    color: #333; /* Dark gray text color */
+    font-weight: 500; /* Slightly bolder font weight */
+    transition: color 0.3s ease; /* Smooth color transition on hover */
+  }
+  
+  .navbar-left a:hover, .navbar-right a:hover {
+    color: #007bff; /* Blue color on hover */
+  }
+  
+  .profile-picture {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 0.5rem;
+  }
+  
+  /* Optional: Add a logo or brand name */
+  .navbar-brand {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #007bff;
+    margin-right: 2rem;
+  }
