@@ -92,6 +92,7 @@ const Data = [
 const Jobs = () => {
   return (
     <div>
+      
       <div className="jobContainer flex gap-10 justify-center flex-wrap items-center py-10 " >
         {Data.map((job) => (
           <div

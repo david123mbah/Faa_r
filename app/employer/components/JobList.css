@@ -1,0 +1,115 @@
+/* General Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+  }
+  
+  .jobContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .singleJob {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 300px; /* Adjust as needed */
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  }
+  
+  /* Hover Effect */
+  .singleJob:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Job Card Content Styling */
+  .singleJob h1 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .singleJob h6 {
+    font-size: 0.9rem;
+    color: #777;
+    margin-bottom: 15px;
+  }
+  
+  .singleJob p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: #555;
+    margin-bottom: 15px;
+  }
+  
+  .company {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  
+  .company img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  
+  .company span {
+    font-size: 1rem;
+    font-weight: bold;
+  }
+  
+  /* Buttons */
+  .singleJob button {
+    background-color: #007bff; /* Blue button color */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+  }
+  
+  .singleJob button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+  }
+  
+  /* Time Icon */
+  .singleJob .flex .BiTimeFive {
+    font-size: 1.2rem;
+    color: #777;
+  }
+  
+  /* Styling for "Active Job Postings" */
+  .text-2xl.font-bold.mb-4 {
+    font-size: 4rem; /* Make it bigger */
+    font-weight: 700; /* Make it bolder */
+    text-align: center; /* Center the text */
+    margin-bottom: 70px; /* Increase bottom margin */
+    color: #333; /* Darker color */
+    animation: fadeInUp 1s ease-in-out; /* Add animation */
+  }
+  
+  /* Animation */
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  .bg-blue-500.hover:bg-blue-700.text-white.font-bold.py-2.px-4.rounded {
+    display: block; /* Make the button a block element */
+    margin: 0 auto; /* Center the button horizontally */
+  }
