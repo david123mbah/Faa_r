@@ -45,7 +45,8 @@ const SearchBar = () => {
             Search
           </button>
         </div>
-
+      <br />
+      <br />
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-2">
             <label htmlFor="relevance" className="text-gray-600 font-semibold">

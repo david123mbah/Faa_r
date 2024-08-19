@@ -1,6 +1,6 @@
 import { ClerkProvider } from "@clerk/nextjs";
-import { Public_Sans } from "next/font/google"; 
-import "./globals.css"; 
+import { Public_Sans } from "next/font/google";
+import "./globals.css";
 import Navbar from "./Components/Navbar";
 import Footer from "./Components/Footer";
 import SearchBar from "./Components/SearchBar";
@@ -35,13 +35,12 @@ export default function RootLayout({ children }) {
       }}
     >
       <html lang="en">
-        <body className={publicSans.className}>
-          <Navbar/>
-          <SearchBar/>
+        <body className="body">
+          <Navbar />
+          <SearchBar />
+          <main>{children}</main>
 
-         
-           {children} 
-             <Footer/>
+          <Footer />
         </body>
       </html>
     </ClerkProvider>

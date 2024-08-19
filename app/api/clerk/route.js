@@ -1,4 +1,4 @@
-import { createUser, deleteUser, updateUser } from "@/actions/user";
+import { createUser, deleteUser, updateUser } from "../../../actions/user";
 import { headers } from "next/headers";
 import { Webhook } from "svix";
 

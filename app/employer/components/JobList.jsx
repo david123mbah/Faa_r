@@ -99,14 +99,14 @@ const JobList = () => {
   };
   return (
     <div>
-      <div className="jobContainer flex gap-10 justify-center flex-wrap items-center py-10">
+      <div className="jobContainer flex   justify-center flex-wrap items-center py-10">
         {Data.map((job) => (
           <div
             key={job.id}
             className="group group/item singleJob w-[250px] p-[20px] bg-white rounded-[10px] hover:bg-blueColor shadow-lg shadow-grayIsh400/700 hover:shadow-lg"
           >
             <span className="flex justify-between items-center gap-4">
-              <h1 className="text-[16px] font-semibold text-textColor group-hover:text-white">
+              <h1 className="text-[16px] font-semibold text-textColor group-hover:text-black">
                 {job.title}
               </h1>
               <span className="flex items-center text-[#ccc] gap-1">
@@ -114,18 +114,18 @@ const JobList = () => {
               </span>
             </span>
             <h6 className="text-[#ccc]">{job.location}</h6>
-            <p className="text-[12px] text-[#95959] pt-[20px] border-t-[2px] mt-[20px] group-hover:text-white">
+            <p className="text-[12px] text-[#95959] pt-[20px] border-t-[2px] mt-[20px] group-hover:text-black">
               {job.desc}
             </p>
             <div className="company flex items-center gap-2">
               <img src={job.image} alt="Company logo" className="w-[10%]" />
-              <span className="text-[14px] py-[1rem] block group-hover:text-white">
+              <span className="text-[14px] py-[1rem] block group-hover:text-black">
                 {job.company}
               </span>
             </div>
             <div className="flex justify-center items-center">
             <button
-                className="border-[3px] rounded-[10px] p-[5px] w-[100px] text-[12px] font-semibold text-textColor hover:bg-white group-hover:text-textColor group-hover:text-white"
+                className="border-[3px] rounded-[10px] p-[5px] w-[100px] text-[12px] font-semibold text-textColor hover:bg-white group-hover:text-textColor group-hover:text-black"
                 onClick={() => handleShowApplicantsClick(job.id)} // Pass jobId to the handler
               >
                 Show Applicants

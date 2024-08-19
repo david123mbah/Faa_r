@@ -2,7 +2,6 @@
 body {
     font-family: 'Arial', sans-serif;
     background-color: #f4f4f4;
-    color: #333;
   }
   
   .jobContainer {
@@ -24,8 +23,10 @@ body {
   
   /* Hover Effect */
   .singleJob:hover {
+    color: black;
     transform: translateY(-5px);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
   }
   
   /* Job Card Content Styling */

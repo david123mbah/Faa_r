@@ -1,6 +1,6 @@
 "use server";
 
-import { db } from "@/lib/db"; 
+import { db } from "../lib1/db";
 
 export const createUser = async (user) => {
   const { id, first_name, last_name, email_address, image_url, username } =
@@ -101,4 +101,3 @@ export const deleteUser = async (id) => {
 
   console.log("User deleted in supabase");
 };
- 
