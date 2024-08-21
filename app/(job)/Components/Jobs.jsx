@@ -1,5 +1,7 @@
+import Image from 'next/image';
 import React from 'react';
 import { BiTimeFive } from 'react-icons/bi';
+// import {Image} from 'next/image'
 
 // job data 
 //TODO: Add employer's email to all the jobs
@@ -114,7 +116,7 @@ numberOfJobs < job.id ?
             {job.desc}
           </p>
           <div className="company flex items-center gap-2">
-            <img src={job.image} alt="Company logo" className="w-[10%]" />
+            <Image src={job.image} alt="Company logo" className="w-[10%]" />
             <span className="text-[14px] py-[1rem] block  group-hover:text-black">
               {job.company}
             </span>
