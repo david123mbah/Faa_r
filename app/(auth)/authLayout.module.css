@@ -1,7 +1,8 @@
 .wrapper{
     min-width: 100vw;
     min-height: 100vh;
-    background: #FFEDC9;
+    background: #0ACEF9;
+    /* background: #2a68ff; */
     display: flex;
     align-items: center;
     justify-content: center;

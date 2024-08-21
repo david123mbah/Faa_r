@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { BiTimeFive } from 'react-icons/bi';
 import ApplicantList from './applicants';
 import './JobList.css';
+import Image from 'next/image';
 
 // Job data (replace with your actual data)
 const Data = [
@@ -118,7 +119,7 @@ const JobList = () => {
               {job.desc}
             </p>
             <div className="company flex items-center gap-2">
-              <img src={job.image} alt="Company logo" className="w-[10%]" />
+              <Image src={job.image} alt="Company logo" className="w-[10%]" />
               <span className="text-[14px] py-[1rem] block group-hover:text-black">
                 {job.company}
               </span>
