@@ -91,15 +91,15 @@ const Data = [
   ];
 
 
-const Jobs = (numberOfJobs) => {
+const Jobs = ( ) => {
   return (
     <div>
       
       <div className="jobContainer flex gap-10 justify-center flex-wrap items-center py-10 " >
         {Data.map((job) => (
 
-numberOfJobs < job.id ?
-         ( <div
+ 
+          <div
           key={job.id}
           className="group group/item singleJob w-[250px] p-[20px] bg-white rounded-[10px] hover:bg-blueColor shadow-lg shadow-grayIsh400/700 hover:shadow-lg"
         >
@@ -116,7 +116,7 @@ numberOfJobs < job.id ?
             {job.desc}
           </p>
           <div className="company flex items-center gap-2">
-            <Image src={job.image} alt="Company logo" className="w-[10%]" />
+            <Image width={100} height={100} src={job.image} alt="Company logo" className="w-[10%]" />
             <span className="text-[14px] py-[1rem] block  group-hover:text-black">
               {job.company}
             </span>
@@ -131,8 +131,7 @@ numberOfJobs < job.id ?
               Apply Now
             </button>
           </div>
-        </div>) : null
-        ))}
+        </div>) )}
       </div>
     </div>
   );
