@@ -5,6 +5,8 @@ import JobList from './components/JobList';
 import CreateJob from './components/CreateJob';
 import './App.css';
 import { PasskeyModal } from '../Components/PasskeyModal';
+import { redirect } from 'next/navigation';
+import { useUser } from '@clerk/nextjs';
 
 const  App = ({searchParams}) => {
   const [showCreateJobPopup, setShowCreateJobPopup] = useState(false);
@@ -20,7 +22,11 @@ const  App = ({searchParams}) => {
   const isAdmin = searchParams?.isAdmin === "true";
 
   console.log(searchParams);
-  
+  const { isLoaded, isSignedIn, user } = useUser();
+
+  if (!isSignedIn) {
+    redirect('/sign-in')
+  }
 
   return (
     
