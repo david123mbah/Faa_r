@@ -12,13 +12,12 @@ import {
   AlertDialogFooter,
   AlertDialogHeader,
   AlertDialogTitle,
-} from "../../@/components/ui/alert-dialog";
+} from "../../../@/components/ui/alert-dialog";
 import {
   InputOTP,
   InputOTPGroup,
   InputOTPSlot,
-} from "../../@/components/ui/input-otp";
- 
+} from "../../../@/components/ui/input-otp";
 
 export function encryptKey(passkey) {
   return btoa(passkey);
@@ -57,9 +56,7 @@ export const PasskeyModal = () => {
     router.push("/");
   };
 
-  const validatePasskey = (
-    e 
-  ) => {
+  const validatePasskey = (e) => {
     e.preventDefault();
 
     if (passkey === process.env.NEXT_PUBLIC_ADMIN_PASSKEY) {
