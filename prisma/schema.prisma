@@ -11,10 +11,12 @@ generator client {
 datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
+
 }
 
 model User {
-    id            String    @id
+    user_id       String    @id
     email_address String?   @unique
     first_name    String?
     last_name     String?
@@ -22,4 +24,66 @@ model User {
     banner_url    String?
     banner_id     String?
     username      String?   @unique 
+    role       Role
+    applications Application[]
+    notifications Notification[]
+    alerts      Alert[]
+}
+model Job {
+  job_id      String   @id @default(uuid()) // Unique identifier for each job
+  image_url   String?
+  title       String
+  description String
+  company_name String
+  company_email String
+  location    String
+  posted_date DateTime
+  tag_id      String?
+  tag         Tag?     @relation(fields: [tag_id], references: [tag_id])
+  applications Application[]
+  alerts      Alert[]
+}
+
+model Tag {
+  tag_id   String @id @default(uuid()) // Unique identifier for each tag
+  tag_name String
+  jobs     Job[]
+}
+
+model Application {
+  application_id  String   @id @default(uuid()) // Unique identifier for each application
+  resume_url      String
+  cover_letter_url String?
+  status          ApplicationStatus
+  job_id          String
+  user_id         String
+  job             Job      @relation(fields: [job_id], references: [job_id])
+  user            User     @relation(fields: [user_id], references: [user_id])
+}
+
+model Notification {
+  notif_id String @id @default(uuid()) // Unique identifier for each notification
+  content  String
+  user_id  String
+  user     User   @relation(fields: [user_id], references: [user_id])
+}
+
+model Alert {
+  alert_id String @id @default(uuid()) // Unique identifier for each alert
+  user_id  String
+  user     User   @relation(fields: [user_id], references: [user_id])
+  job_id   String
+  job      Job    @relation(fields: [job_id], references: [job_id])
+}
+
+enum Role {
+  JOB_SEEKER
+  EMPLOYER
+  ADMIN
+}
+
+enum ApplicationStatus {
+  FAILED
+  PENDING
+  SUCCESS
 }
