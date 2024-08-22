@@ -1,36 +1,25 @@
-import './Job.css'; // Import your CSS file
 
 "use client";
+import './Job.css'; // Import your CSS file
 import React from "react";
 import Jobs from "./(job)/Components/Jobs";
 import { useAuth } from "@clerk/nextjs";
 import { redirect } from "next/navigation";
+import Navbar from './(job)/Components/Navbar';
+import './style.css';
+import Footer from './(job)/Components/Footer';
 
 
 //TODO: Design this page and have it be landing page of the app
 const MainPage = () => {
-  const { isLoaded, userId, sessionId, getToken } = useAuth()
   
-  if (!userId) {
-    redirect('/sign-in')
-  }
   return (
 
+     <>
       <div className="job-container">
         <header className="header">
-          <nav className="navbar">
-            <div className="logo">
-              <h1>Faa'r</h1>
-            </div>
-            <ul className="nav-links">
-              <li>
-                <a href="#">Sign In</a>
-              </li>
-              <li>
-                <a href="#">Login</a>
-              </li>
-            </ul>
-          </nav>
+          <Navbar from='text-white'/>
+          
           <div className="hero">
             <video autoPlay muted loop className="hero-video">
               <source src="lab.mp4" type="video/mp4" />
@@ -91,9 +80,13 @@ const MainPage = () => {
           </div>
         </section>
       </div>
+
+      <Footer/>
+     
+     </>
     );
 }
 
-export default page
+export default MainPage
 
 

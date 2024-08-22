@@ -1,8 +1,14 @@
 
 import React from 'react';
 import './ContactUs.css'; // Import your CSS file
+import { auth, currentUser } from '@clerk/nextjs/server'
 
 const Contact = () => {
+  const { userId } = auth()
+  
+  if (!userId) {
+    redirect('/sign-in')
+  }
   return (
     <div className="contact-container">
       <div className="contact-header">

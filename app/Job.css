@@ -5,7 +5,7 @@
   }
   
   .header {
-    background-color: #fff;
+    background-color: #4e52d5;
     padding: 1rem;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
@@ -70,6 +70,7 @@
   }
   
   .statistics {
+    background-color: #4e52d5;
     padding: 4rem 2rem; /* Increase padding */
     text-align: center;
   }
@@ -121,8 +122,10 @@
   }
   
   .actions {
+    background-color: #4e52d5;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    place-items: center;
     gap: 2rem;
     padding: 2rem;
   }
