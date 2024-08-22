@@ -1,6 +1,6 @@
 
 import React from 'react';
-import './ContactUs.css'; // Import your CSS file
+import './Contactus.css'; // Import your CSS file
 import { auth, currentUser } from '@clerk/nextjs/server'
 
 const Contact = () => {
