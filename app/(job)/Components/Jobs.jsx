@@ -96,6 +96,7 @@ const Data = [
   
 const Jobs = () => {
 
+
   const [showCreateJobPopup, setShowCreateJobPopup] = useState(false);
   const [selectedJobId, setSelectedJobId] = useState(null);
 
@@ -115,6 +116,7 @@ const Jobs = () => {
       
       <div className="jobContainer flex gap-10 justify-center flex-wrap items-center py-10 " >
         {Data.map((job) => (
+
           <div
             key={job.id}
             className="group group/item singleJob w-[250px] p-[20px] bg-white rounded-[10px] hover:bg-blueColor shadow-lg shadow-grayIsh400/700 hover:shadow-lg"
