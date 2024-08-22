@@ -1,0 +1,148 @@
+.job-container {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+  }
+  
+  .header {
+    background-color: #fff;
+    padding: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  
+  .nav-links {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav-links li {
+    margin-left: 2rem;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: #333;
+    transition: background-color 0.3s ease; /* Add transition for hover effect */
+    padding: 0.5rem 1rem; /* Add padding to the links */
+    border-radius: 4px; /* Add rounded corners */
+  }
+  
+  .nav-links a:hover {
+    background-color: #007bff; /* Change background color to blue on hover */
+  }
+  
+  .hero {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .hero-video {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+  }
+  
+  .hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+  }
+  
+  .hero-text h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+  
+  .statistics {
+    padding: 4rem 2rem; /* Increase padding */
+    text-align: center;
+  }
+  
+  .statistics h2 {
+    font-size: 2.5rem; /* Increase font size of the heading */
+    margin-bottom: 2rem;
+  }
+  
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  
+  .stat:nth-child(1) { /* First stat */
+    background-color: red;
+  }
+  
+  .stat:nth-child(2) { /* Second stat */
+    background-color: yellow;
+  }
+  
+  .stat:nth-child(3) { /* Third stat */
+    background-color: orange;
+  }
+  
+  .stat:nth-child(4) { /* Fourth stat */
+    background-color: blue;
+  }
+  
+  .stat {
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Increased default shadow */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Add transition for box-shadow */
+    color: white; /* Set text color to white for better visibility */
+  }
+  
+  .stat:hover {
+    background-color: #007bff; /* Change background color to blue on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Increased shadow on hover */
+  }
+  
+  .stat h3 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .actions {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+  }
+  
+  .action-item {
+    background-color: #fff;
+    padding: 2rem; /* Increased padding */
+    border-radius: 16px; /* Increased border radius */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Increased shadow */
+    text-align: center;
+    transition: transform 0.3s ease; /* Add transition for transform */
+  }
+  
+  .action-item:hover {
+    transform: translateY(-5px); /* Lift the item slightly on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Increased shadow on hover */
+  }
+  
+  .action-item h3 {
+    margin-bottom: 1rem;
+    font-size: 1.5rem; /* Increased font size */
+    font-weight: bold; /* Added bold font weight */
+  }
