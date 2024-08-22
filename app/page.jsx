@@ -1,10 +1,21 @@
-import React from 'react'
-import Jobs from './(job)/Components/Jobs'
 import './Job.css'; // Import your CSS file
 
+"use client";
+import React from "react";
+import Jobs from "./(job)/Components/Jobs";
+import { useUser } from "@clerk/nextjs";
+import { redirect } from "next/navigation";
+
+
 //TODO: Design this page and have it be landing page of the app
-const page = () => {
+const MainPage = () => {
+  const { isLoaded, isSignedIn, user } = useUser();
+
+  if (!isSignedIn) {
+    redirect("/sign-in");
+  }
   return (
+
       <div className="job-container">
         <header className="header">
           <nav className="navbar">
@@ -84,4 +95,5 @@ const page = () => {
 }
 
 export default page
+
 

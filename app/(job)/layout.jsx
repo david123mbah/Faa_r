@@ -23,6 +23,7 @@ export const viewport = {
 };
 
 export default function RootLayout({ children }) {
+  
   return (
     <main>
       <Navbar />
