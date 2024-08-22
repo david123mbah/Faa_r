@@ -5,6 +5,7 @@ import { db } from "../lib1/db";
 export const createUser = async (user) => {
   const { id, first_name, last_name, email_address, image_url, username } =
     user;
+    let role = 'JOB_SEEKER'
   try {
     const userExists = await db.user.findUnique({
       where: {
@@ -23,6 +24,8 @@ export const createUser = async (user) => {
         email_address,
         image_url,
         username,
+        role,
+
       },
     });
     console.log("New user created in db");

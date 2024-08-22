@@ -1,15 +1,15 @@
 "use client";
 import React from "react";
 import Jobs from "./(job)/Components/Jobs";
-import { useUser } from "@clerk/nextjs";
+import { useAuth } from "@clerk/nextjs";
 import { redirect } from "next/navigation";
 
 //TODO: Design this page and have it be landing page of the app
 const MainPage = () => {
-  const { isLoaded, isSignedIn, user } = useUser();
-
-  if (!isSignedIn) {
-    redirect("/sign-in");
+  const { isLoaded, userId, sessionId, getToken } = useAuth()
+  
+  if (!userId) {
+    redirect('/sign-in')
   }
   return (
     <div>

@@ -1,13 +1,13 @@
 "use client"
 
-import { useUser } from '@clerk/nextjs';
+import { useAuth, useUser } from '@clerk/nextjs';
 import { redirect } from 'next/navigation';
 import React from 'react'
 
 const ApplicationPage = () => {
-  const { isLoaded, isSignedIn, user } = useUser();
-
-  if (!isSignedIn) {
+  const { isLoaded, userId, sessionId, getToken } = useAuth()
+  
+  if (!userId) {
     redirect('/sign-in')
   }
   return (

@@ -119,7 +119,7 @@ const JobList = () => {
               {job.desc}
             </p>
             <div className="company flex items-center gap-2">
-              <Image src={job.image} alt="Company logo" className="w-[10%]" />
+              <Image src={job.image} alt="Company logo" width={100} height={100} className="w-[10%]" />
               <span className="text-[14px] py-[1rem] block group-hover:text-black">
                 {job.company}
               </span>

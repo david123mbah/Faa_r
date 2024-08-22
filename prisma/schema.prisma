@@ -16,7 +16,7 @@ datasource db {
 }
 
 model User {
-    user_id       String    @id
+    id       String    @id
     email_address String?   @unique
     first_name    String?
     last_name     String?
@@ -56,22 +56,22 @@ model Application {
   cover_letter_url String?
   status          ApplicationStatus
   job_id          String
-  user_id         String
+  id         String
   job             Job      @relation(fields: [job_id], references: [job_id])
-  user            User     @relation(fields: [user_id], references: [user_id])
+  user            User     @relation(fields: [id], references: [id])
 }
 
 model Notification {
   notif_id String @id @default(uuid()) // Unique identifier for each notification
   content  String
-  user_id  String
-  user     User   @relation(fields: [user_id], references: [user_id])
+  id  String
+  user     User   @relation(fields: [id], references: [id])
 }
 
 model Alert {
   alert_id String @id @default(uuid()) // Unique identifier for each alert
-  user_id  String
-  user     User   @relation(fields: [user_id], references: [user_id])
+  id  String
+  user     User   @relation(fields: [id], references: [id])
   job_id   String
   job      Job    @relation(fields: [job_id], references: [job_id])
 }

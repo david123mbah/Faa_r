@@ -1,14 +1,14 @@
 "use client";
 import React from "react";
 import Jobs from "../Components/Jobs";
-import { useUser } from "@clerk/nextjs";
+import { useAuth, useUser } from "@clerk/nextjs";
 import { redirect } from "next/navigation";
 
 const HomePage = () => {
-  const { isLoaded, isSignedIn, user } = useUser();
-
-  if (!isSignedIn) {
-    redirect("/sign-in");
+  const { isLoaded, userId, sessionId, getToken } = useAuth()
+  
+  if (!userId) {
+    redirect('/sign-in')
   }
   return (
     <div>
